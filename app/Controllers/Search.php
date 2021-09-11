@@ -2,14 +2,22 @@
 
 namespace App\Controllers;
 
+use App\Models\UserModel;
+
 class Search extends BaseController
 {
 	public function index()
 	{
 		return view('search');
 	}
-	public function index2()
+	
+	public function showUser()
 	{
-		return view('viewsearch');
+		$userModel = new UserModel();
+        $data['datauser'] = $userModel->
+		orderBy('StudentID', 'DESC')->findAll();
+        return view('user_view', $data);
+		
 	}
+
 }

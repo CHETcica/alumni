@@ -37,8 +37,8 @@ $routes->get('/profile', 'Profile::index', ['filter'=>'auth']);
 $routes->get('/logout', 'Login::logout');
 $routes->get('/edit', 'Edit::index');
 $routes->get('/search', 'Search::index');
-$routes->get('/viewsearch', 'Search::index2');
-$routes->get('/user_view', 'Home::table');
+
+$routes->get('/user_view', 'Search::showUser');
 //$routes->get('/delete', 'Search::delete');
 
 /*

@@ -15,9 +15,7 @@
             <div class="col-md-6">
                 <H1>Edit</H1>
                 <hr>
-                
-
-                <form action="/edit/change" metod="post">
+                <form action="/edit/update" metod="post">
                     <div class="row">
                         <div class="col-md-6">
                         <label for="inputFirstname" class="form-label">ชื่อ</label>
@@ -31,24 +29,11 @@
                     
                     <div class="row">
                         <div class="col-md-6">
-                        <label for="inputSex" class="form-label">เพศ</label>
-                        <input type="text" name="Sex" class="form-control" id="inputSex" value="<?php echo $session->get('Sex')?>">
-                        </div>
-                        <div class="col-md-6">
                         <label for="inputProvince" class="form-label">จังหวัด</label>
                         <input type="text" name="Province" class="form-control" id="inputProvince" value="<?php echo $session->get('Province')?>">
                         </div>
                     </div>
 
-
-                    <!-- <div class="mb-3">
-                        <label for="inputStudentID" class="form-label">รหัสนักศึกษา</label>
-                        <input type="text" name="StudentID" class="form-control" id="inputStudentID" disabled value="<?php echo $session->get('StudentID')?>">
-                    </div>
-                    <div class="mb-3">
-                        <label for="inputPassword" class="form-label">รหัสผ่าน</label>
-                        <input type="password" name="Password" class="form-control" id="inputPassword" value="<?php echo $session->get('Lastname')?>">
-                    </div> -->
                     <div class="mb-3">
                         <label for="inputSection" class="form-label">หมู่เรียน</label>
                         <input type="text" name="Section" class="form-control" id="inputSection" value="<?php echo $session->get('Section')?>">
@@ -63,7 +48,6 @@
                     </div>
                     <button type="submit" class="btn btn-primary">แก้ไข</button>
                 </form>
-                
             </div>
         </div>
     </div>

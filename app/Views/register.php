@@ -21,7 +21,7 @@
                     <div class="row">
                         <div class="col-md-6">
                         <label for="inputFirstname" class="form-label">ชื่อ</label>
-                        <input type="text" name="Firstname" class="form-control" id="inputFirstname" value="<?= set_value('Firstname');?>">
+                        <input type="text" name="Firstname" class="form-control" id="inputFirstname" value=" <?= set_value('Firstname');?> ">
                         </div>
                         <div class="col-md-6">
                         <label for="inputLastname" class="form-label">นามสกุล</label>
@@ -32,8 +32,12 @@
                     <div class="row">
                         <div class="col-md-6">
                         <label for="inputSex" class="form-label">เพศ</label>
-                        <input type="text" name="Sex" class="form-control" id="inputSex" value="<?= set_value('Sex');?>">
+                        <select type="text" name="Sex" class="form-control form-select" id="inputSex" value="<?= set_value('Sex');?>">
+                            <option value="ชาย">ชาย</option>
+                            <option value="หญิง">หญิง</option>
+                        </select>
                         </div>
+
                         <div class="col-md-6">
                         <label for="inputProvince" class="form-label">จังหวัด</label>
                         <input type="text" name="Province" class="form-control" id="inputProvince" value="<?= set_value('Province');?>">
