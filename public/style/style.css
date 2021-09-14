@@ -6,3 +6,100 @@
 .card-main-menu{
     width: 500px;
 }
+    .navbar{
+        height: 60px;
+        margin-bottom: -60px;
+        /* border-bottom: solid; */
+        
+    }
+    *{
+    margin: 0;
+    padding: 0;
+    }
+
+    html,
+    body,
+    header,
+    .view {
+        height: 100%;
+    
+    }
+
+    @media (max-width: 740px) {
+    html,
+    body,
+    header,
+    .view {
+        height: 1000px;
+    }
+    }
+    @media (min-width: 800px) and (max-width: 850px) {
+    html,
+    body,
+    header,
+    .view {
+        height: 650px;
+    }
+    }
+
+    .top-nav-collapse {
+    background-color: #ffffff !important;
+    }
+
+    .navbar:not(.top-nav-collapse) {
+    background: transparent !important;
+    }
+
+    @media (max-width: 991px) {
+    .navbar:not(.top-nav-collapse) {
+        background: #ffffff !important;
+    }
+    }
+
+    .rgba-gradient {
+    background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%); 
+    background: -webkit-gradient(linear, 45deg, from(rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%));
+    background: linear-gradient(to 45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
+    }
+
+    .card {
+    background-color: rgba(126, 123, 215, 0.2);
+
+    }
+
+    .md-form label {
+    color: #ffffff;
+    }
+
+    h6 {
+    line-height: 1.7;
+    }
+
+    .card-login{
+    margin-top: 200px;
+    }
+
+    .btn-indigo{
+        color: #fff;
+        background-color: #3f51b5;
+    }
+    .white-text{
+        color: #fff;
+    }
+    .btn-outline-white{
+        border: 2px solid #fff !important;
+        background-color: transparent !important;
+        color: #fff!important;
+    }
+    .card-bg-image{
+        /* background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');  */
+        background-repeat: no-repeat; 
+        background-size: cover; 
+        background-position: center center;
+    }
+    
+
+    .custom-navbar-toggler{
+        border-color: rgb(255,102,203);
+        
+    }

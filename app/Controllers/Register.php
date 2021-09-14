@@ -9,7 +9,10 @@ class Register extends Controller{
         //include helper form
         helper(['form']);
         $data = [];
+        echo view('templates/header');
         echo view('register', $data);
+        echo view('templates/footer');
+        
     }
 
     public function save(){

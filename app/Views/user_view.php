@@ -19,12 +19,13 @@
      <table class="table table-bordered" id="users-list">
        <thead>
           <tr>
-            <th scope="col">StudentID</th>
-            <th scope="col">Firstname</th>
-            <th scope="col">Lastname</th>
-            <th scope="col">Section</th>
-            <th scope="col">Major</th>
-            <th scope="col">EducationYear</th>
+            <th scope="col">รหัสนักศึกษา</th>
+            <th scope="col">ชื่อ</th>
+            <th scope="col">นามสกุล</th>
+            <th scope="col">จังหวัด</th>
+            <th scope="col">หมู่เรียน</th>
+            <th scope="col">สาขาวิชา</th>
+            <th scope="col">ปีการศึกษา</th>
           </tr>
        </thead>
        <tbody >
@@ -34,6 +35,7 @@
             <td><?php echo $user['StudentID'] ?></td>
             <td><?php echo $user['Firstname'] ?></td>
             <td><?php echo $user['Lastname'] ?></td>
+            <td><?php echo $user['Province'] ?></td>
             <td><?php echo $user['Section'] ?></td>
             <td><?php echo $user['Major'] ?></td>
             <td><?php echo $user['EducationYear']?></td>

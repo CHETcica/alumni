@@ -12,7 +12,10 @@ use PhpParser\Node\Stmt\TryCatch;
 class Edit extends BaseController{
     public function index(){
         helper(['form']);
-        return view('edit');
+        echo view('templates/header');
+        echo view('edit');
+        echo view('templates/footer');
+         
     }
 
     public function update(){

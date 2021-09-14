@@ -1,80 +1,194 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-</head>
-<body>
-    <div class="container mt-4">
-        <div class="row justify-content-md-center">
-            <div class="col-md-6">
-                <H1>Sign up</H1>
-                <hr>
-                <?php if(isset($validation)): ?>
-                    <div class="alert alert-danger"><?= $validation->listErrors();?></div>
-                <?php endif;?>
 
-                <form action="/register/save" metod="post">
-                    <div class="row">
-                        <div class="col-md-6">
-                        <label for="inputFirstname" class="form-label">ชื่อ</label>
-                        <input type="text" name="Firstname" class="form-control" id="inputFirstname" value=" <?= set_value('Firstname');?> ">
-                        </div>
-                        <div class="col-md-6">
-                        <label for="inputLastname" class="form-label">นามสกุล</label>
-                        <input type="text" name="Lastname" class="form-control" id="inputLastname" value="<?= set_value('Lastname');?>">
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-md-6">
-                        <label for="inputSex" class="form-label">เพศ</label>
-                        <select type="text" name="Sex" class="form-control form-select" id="inputSex" value="<?= set_value('Sex');?>">
-                            <option value="ชาย">ชาย</option>
-                            <option value="หญิง">หญิง</option>
-                        </select>
-                        </div>
+    <?php if(session()->getFlashdata('msg')): ?>
+        <div class="alert alert-danger"><?= session()->getFlashdata('msg');?></div>
+    <?php endif;?>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        }
 
-                        <div class="col-md-6">
-                        <label for="inputProvince" class="form-label">จังหวัด</label>
-                        <input type="text" name="Province" class="form-control" id="inputProvince" value="<?= set_value('Province');?>">
-                        </div>
-                    </div>
+        html,
+        body,
+        header,
+        .view {
+        height: 100%;
+        }
+
+        @media (max-width: 740px) {
+        html,
+        body,
+        header,
+        .view {
+            height: 1000px;
+        }
+        }
+        @media (min-width: 800px) and (max-width: 850px) {
+        html,
+        body,
+        header,
+        .view {
+            height: 650px;
+        }
+        }
+
+        .top-nav-collapse {
+        background-color: #3f51b5 !important;
+        }
+
+        .navbar:not(.top-nav-collapse) {
+        background: transparent !important;
+        }
+
+        @media (max-width: 991px) {
+        .navbar:not(.top-nav-collapse) {
+            background: #3f51b5 !important;
+        }
+        }
+
+        .rgba-gradient {
+        background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%); 
+        background: -webkit-gradient(linear, 45deg, from(rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%));
+        background: linear-gradient(to 45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
+        }
+
+        .card {
+        background-color: rgba(126, 123, 215, 0.2);
+        }
+
+        .md-form label {
+        color: #ffffff;
+        }
+
+        h6 {
+        line-height: 1.7;
+        }
+
+        .card-login{
+            margin-top: 200px;
+        }
+
+        .btn-indigo{
+            color: #fff;
+            background-color: #3f51b5;
+        }
+        .white-text{
+            color: #fff;
+        }
+        .btn-outline-white{
+            border: 2px solid #fff !important;
+            background-color: transparent !important;
+            color: #fff!important;
+        }
+    </style>
 
 
-                    <div class="mb-3">
-                        <label for="inputStudentID" class="form-label">รหัสนักศึกษา</label>
-                        <input type="text" name="StudentID" class="form-control" id="inputStudentID" value="<?= set_value('StudentID');?>">
+    <div class="view" style=" background-image: url('https://mdbcdn.b-cdn.net/img/Photos/Others/images/91.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        <div class="rgba-gradient">
+            <div class="container ">
+                <div class="row justify-content-md-center">
+                        <!--**************************************************************  -->
+                    <div class=" col-md-6 mb-5 mt-md-0 mt-5  white-text text-md-left ">
+                        <h1 class="h1-responsive font-weight-bold wow fadeInLeft card-login ">
+                            Sign up right now!
+                        </h1>
+                        <hr class="hr-light "/>
+                        <h6 class="mb-3">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+                            repellendus quasi fuga nesciunt dolorum nulla magnam veniam
+                            sapiente, fugiat! Commodi sequi non animi ea dolor molestiae,
+                            quisquam iste, maiores. Nulla.
+                        </h6>
+                        <a
+                        class="btn btn-outline-white ">Learn more</a>
                     </div>
-                    <div class="mb-3">
-                        <label for="inputPassword" class="form-label">รหัสผ่าน</label>
-                        <input type="password" name="Password" class="form-control" id="inputPassword" value="<?= set_value('Password');?>">
-                    </div>
-                    <div class="mb-3">
-                        <label for="inputSection" class="form-label">หมู่เรียน</label>
-                        <input type="text" name="Section" class="form-control" id="inputSection" value="<?= set_value('Section');?>">
-                    </div>
-                    <div class="mb-3">
-                        <label for="inputMajor" class="form-label">สาขาวิชา</label>
-                        <input type="text" name="Major" class="form-control" id="inputMajor" value="<?= set_value('Major');?>">
-                    </div>
-                    <div class="mb-3">
-                        <label for="inputEducationYear" class="form-label">ปีการศึกษา</label>
-                        <input type="text" name="EducationYear" class="form-control" id="inputEducationYear" value="<?= set_value('EducationYear');?>">
-                    </div>
-                    <button type="submit" class="btn btn-primary">สมัครสมาชิก</button>
-                </form>
-                <hr>
-                <a href="/login" class="btn btn-primary">เข้าสู่ระบบ</a>
+                        <!--**************************************************************  -->     
+                    <div class="col-md-6 col-xl-5 mb-4">
+
+                        <form action="/register/save" metod="post">
+                            <div class="card card-login" >
+                                <div class="card-body ">
+                                    <!--Header-->
+                                    <div class="text-center">
+                                        <h3 class="white-text">
+                                            <i class="fas fa-user white-text"></i>Register
+                                        </h3>
+                                        <hr class="hr-light" />
+                                    </div>
+                                    <!--Body-->
+                                    <div class="row">
+                                        <div class="md-form col-xl-6 ">
+                                            <i class="fas fa-user prefix white-text active"></i>
+                                            <input type="text" id="form3" name="Firstname" 
+                                            class="form-control" id="inputFirstname" value="<?= set_value('Firstname');?>">
+                                            <label for="Firstname" class="active">Your name</label>
+                                        </div>
+                                        <div class="md-form col-xl-6 ">
+                                            <i class="fas fa-lock prefix white-text active"></i>
+                                            <input type="text" id="form4" name="Lastname" 
+                                            class="form-control" id="inputLastname" value="<?= set_value('Lastname');?>">
+                                            <label for="Lastname">Your lastname</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="md-form col-xl-6 ">
+                                            <select type="text" name="Sex" class="form-control form-select" id="inputSex" value="<?= set_value('Sex');?>">
+                                                <option value="ชาย">ชาย</option>
+                                                <option value="หญิง">หญิง</option>
+                                            </select>
+                                            <label for="inputSex" class="active">sex</label>
+                                        </div>
+                                        <div class="md-form col-xl-6 ">
+                                            <input type="text" name="Province" class=" form-control" id="inputProvince" value="<?= set_value('Province');?>">
+                                            <label for="inputProvince" class="white-text form-label">province</label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" name="StudentID" class=" form-control" id="inputStudentID" value="<?= set_value('StudentID');?>">
+                                        <label for="inputStudentID" class="white-text form-label">student id</label>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="password" name="Password" class="form-control" id="inputPassword" value="<?= set_value('Password');?>">
+                                        <label for="inputPassword" class="white-text form-label">password</label>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col">
+                                            <input type="text" name="Section" class="form-control" id="inputSection" value="<?= set_value('Section');?>">
+                                            <label for="inputSection" class="white-text form-label">study group</label>    
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" name="EducationYear" class="form-control" id="inputEducationYear" value="<?= set_value('EducationYear');?>">
+                                            <label for="inputEducationYear" class="white-text form-label">educationYear</label>
+                                        </div>
+                                        
+
+
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" name="Major" class="form-control" id="inputMajor" value="<?= set_value('Major');?>">
+                                        <label for="inputMajor" class="white-text form-label">major</label>
+
+                                    </div>
+                                    
+
+                                    
+                                    <div class="text-center mt-4">
+                                        <button type="submit" class="btn btn-indigo">Sign in</button>
+                                        <a href="/login" class="btn btn-outline-white">Login</a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </form>
+                        
+                        
+                    </div>   
+                </div>
             </div>
         </div>
     </div>
+      
+    
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-</body>
-</html>
