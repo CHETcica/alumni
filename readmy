@@ -1,0 +1,107 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Oct 04, 2021 at 03:17 PM
+-- Server version: 10.4.20-MariaDB
+-- PHP Version: 8.0.8
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `demo`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `address`
+--
+
+CREATE TABLE `address` (
+  `UserID` int(30) NOT NULL,
+  `Address` varchar(255) NOT NULL,
+  `Province` varchar(255) NOT NULL,
+  `District` varchar(255) NOT NULL,
+  `Subdistrict` varchar(255) NOT NULL,
+  `Zipcode` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `Firstname` varchar(30) NOT NULL,
+  `Lastname` varchar(30) NOT NULL,
+  `Sex` varchar(30) NOT NULL,
+  `Province` varchar(30) NOT NULL,
+  `StudentID` varchar(30) NOT NULL,
+  `Password` varchar(255) NOT NULL,
+  `Section` varchar(30) NOT NULL,
+  `Major` varchar(30) NOT NULL,
+  `EducationYear` int(30) NOT NULL,
+  `UserID` int(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`Firstname`, `Lastname`, `Sex`, `Province`, `StudentID`, `Password`, `Section`, `Major`, `EducationYear`, `UserID`) VALUES
+('เจษฎากร', 'เมืองนาม', 'ชาย', 'สมุทรสาคร', '624259008', '$2y$10$VZQOjQBf4pSblPZz0iObmuAD7j9bYy9fmxjofayL/245SAWEVFnFe', '62/45', 'วิศวกรรมซอฟต์เเวร์', 2562, 2),
+('อัครชัย', 'เภาทอง', 'ชาย', 'ราชบุรี', '624259034', '$2y$10$Fw.rdJ64nJZWtEX.EWxuj.m2h/7JYemboUDA9i6x9CFX.dyf7ZtKW', '62/45', 'วิศวกรรมซอฟต์แวร์', 2562, 3),
+('ปริน', 'สุขเร่ห์', 'ชาย', 'นครปฐม', '624259020', '$2y$10$o.V2622FhmeHCBkcS2rbF.k.8uNpbCCyLGHV551E/q9cn.GA5wI96', '62/45', 'วิศวกรรมซอฟต์เเวร์', 2562, 4),
+('ภาณุพงศ์', 'หาระสุข', 'ชาย', 'สมุทรสงคราม', '624259023', '$2y$10$AfwkzX2/tSxkWZ5PWNCMQeUOyhe5apnIkpmbHdI2Z9AFybgkjE/0i', '62/45', 'วิศวกรรมซอฟต์เเวร์', 2562, 5);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `address`
+--
+ALTER TABLE `address`
+  ADD PRIMARY KEY (`UserID`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`UserID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `UserID` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `address`
+--
+ALTER TABLE `address`
+  ADD CONSTRAINT `address_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `user` (`UserID`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
