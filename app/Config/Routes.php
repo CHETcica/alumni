@@ -32,15 +32,23 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
-$routes->get('/profile', 'Profile::index', ['filter'=>'auth']);
-$routes->get('/logout', 'Login::logout');
-$routes->get('/edit', 'Edit::index');
-$routes->get('/search', 'Search::index');
-
-$routes->get('/user_view', 'Search::showUser');
-//$routes->get('/delete', 'Search::delete');
-
+// $routes->get('/', 'Home::index');
+// $routes->get('/profile', 'Profile::index', ['filter'=>'auth']);
+// $routes->get('/logout', 'Login::logout');
+// $routes->get('/edit', 'Edit::index');
+// $routes->get('/search', 'Search::index');
+// $routes->get('/alert', 'Register::alert');
+// $routes->get('/user_view', 'Search::showUser');
+// $routes->get('/delete', 'Search::delete');
+$routes->group('public', function ($routes) {
+	$routes->get('/', 'Home::index');
+	$routes->get('/profile', 'Profile::index', ['filter'=>'auth']);
+	$routes->get('/logout', 'Login::logout');
+	$routes->get('/edit', 'Edit::index');
+	$routes->get('/search', 'Search::index');
+	$routes->get('/alert', 'Register::alert');
+	$routes->get('/user_view', 'Search::showUser');
+});
 /*
  * --------------------------------------------------------------------
  * Additional Routing

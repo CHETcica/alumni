@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <title>Login Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
-<body>
+<body> -->
     <?php if(session()->getFlashdata('msg')): ?>
         <div class="alert alert-danger"><?= session()->getFlashdata('msg');?></div>
     <?php endif;?>
@@ -106,8 +106,9 @@
                             sapiente, fugiat! Commodi sequi non animi ea dolor molestiae,
                             quisquam iste, maiores. Nulla.
                         </h6>
-                        <a
-                        class="btn btn-outline-white ">Learn more</a>
+                        <a class="btn btn-outline-white ">
+                            Learn more
+                        </a>
                     </div>
                         <!--**************************************************************  -->     
                     <div class="col-md-6 col-xl-5 mb-4">
@@ -124,13 +125,13 @@
                                     <!--Body-->
                                     <div class="md-form">
                                         <i class="fas fa-user prefix white-text active"></i>
-                                        <input type="text" id="form3" name="StudentID" class="white-text form-control" id="inputStudentID" value="<?= set_value('StudentID');?>">
                                         <label for="form3" class="active">Your student id</label>
+                                        <input type="text" id="form3" name="StudentID" class="white-text form-control" id="inputStudentID" value="<?= set_value('StudentID');?>">
                                     </div>
                                     <div class="md-form">
                                         <i class="fas fa-lock prefix white-text active"></i>
-                                        <input type="password" id="form4" name="Password" class="white-text form-control" id="inputPassword" value="<?= set_value('Password');?>">
                                         <label for="form4">Your password</label>
+                                        <input type="password" id="form4" name="Password" class="white-text form-control" id="inputPassword" value="<?= set_value('Password');?>">
                                     </div>
                                     <div class="text-center mt-4">
                                         <button type="submit" class="btn btn-indigo">Sign in</button>
@@ -150,5 +151,5 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-</body>
-</html>
+<!-- </body>
+</html> -->

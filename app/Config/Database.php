@@ -32,10 +32,10 @@ class Database extends Config
 	 */
 	public $default = [
 		'DSN'      => '',
-		'hostname' => 'localhost',
-		'username' => 'root',
-		'password' => '',
-		'database' => 'demo',
+		'hostname' => 'http://27.254.174.63',
+		'username' => 'cyberlif_008',
+		'password' => '12345',
+		'database' => 'cyberlif_alm1',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => false,

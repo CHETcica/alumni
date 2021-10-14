@@ -23,6 +23,7 @@
                         <a class="nav-link" style="color: #FFF;" href="/">Home</a>
                         <a class="nav-link" style="color: #FFF;" href="/user_view">Search</a>
                         <a class="nav-link" style="color: #FFF;" href="/login">Login</a>
+                        <a class="nav-link" style="color: #FFF;" href="/profile">Profile</a>
                     </div>
                     </div>
                 </div>

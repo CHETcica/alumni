@@ -14,6 +14,11 @@ class Register extends Controller{
         echo view('templates/footer');
         
     }
+    public function alert(){
+        echo view('templates/header');
+        echo view('alert');
+        echo view('templates/footer');
+    }
 
     public function save(){
         helper('form');
@@ -42,8 +47,9 @@ class Register extends Controller{
                 'Major' => $this->request->getVar('Major'),
                 'EducationYear' => $this->request->getVar('EducationYear')
             ];
-            $model->save($data);
-            return redirect()->to('/login');
+            $model->insert($data);
+            return redirect()->to('/alert');
+
         }else{
             $data['validation']= $this->validator;
             echo view('register', $data);

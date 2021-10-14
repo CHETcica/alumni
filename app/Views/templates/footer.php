@@ -1,11 +1,37 @@
 <footer>
 	<div class="environment">
-		<p>Page rendered in {elapsed_time} seconds</p>
-		<p>Environment: <?= ENVIRONMENT ?></p>
-	</div>
-	<div class="copyrights">
-		<p>&copy; <?= date('D/M/Y') ?> CodeIgniter Foundation. CodeIgniter is open source project released under the MIT
-			open source licence.</p>
+		<div class="row">
+			<div class="col">
+				<p>
+					
+				</p>
+			</div>
+			<div class="col">
+				<p>
+					power by <a href="https://codeigniter.com/">CodeIgniter</a>
+				</p>
+			</div>
+			<div class="col">
+				<div class="row">
+					<div class="col">
+						<a href="#">
+							<img class="icon-footer"  src="https://cdn-icons-png.flaticon.com/512/733/733614.png" alt="">
+						</a>
+					</div>
+					<div class="col">
+						<a href="#">	
+							<img class="icon-footer" style="margin-top: 35px;" src="https://cdn-icons-png.flaticon.com/512/733/733603.png" alt="">
+						</a>
+					</div>
+					<div class="col">
+						<a href="#">
+							<img class="icon-footer" style="margin-top: 10px;" src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="">
+						</a>
+					</div>
+				</div>
+					
+			</div>
+		</div>	
 	</div>
 </footer>
 <!-- SCRIPTS -->

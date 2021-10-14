@@ -14,8 +14,7 @@ class Search extends BaseController
 	public function showUser()
 	{
 		$userModel = new UserModel();
-        $data['datauser'] = $userModel->
-		orderBy('StudentID', 'DESC')->findAll();
+        $data['datauser'] = $userModel->orderBy('StudentID', 'DESC')->findAll();
 			echo view('templates/header');
             echo view('user_view', $data);
             echo view('templates/footer');

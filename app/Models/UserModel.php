@@ -3,8 +3,8 @@
 use CodeIgniter\Model;
 
     class UserModel extends Model{
-        protected $table = 'datauser';
+        protected $table = 'user';
         protected $primaryKey = 'StudentID';
-        protected $allowedFields = ['Firstname','Lastname','Sex','Province','Password','Section','Major','EducationYear'];
+        protected $allowedFields = ['Firstname','Lastname','Sex','Province','StudentID','Password','Section','Major','EducationYear'];
     }
 ?>

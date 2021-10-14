@@ -119,54 +119,57 @@
                                     <div class="row">
                                         <div class="md-form col-xl-6 ">
                                             <i class="fas fa-user prefix white-text active"></i>
+                                            <label for="Firstname" class="active">Your name</label>
                                             <input type="text" id="form3" name="Firstname" 
                                             class="form-control" id="inputFirstname" value="<?= set_value('Firstname');?>">
-                                            <label for="Firstname" class="active">Your name</label>
                                         </div>
                                         <div class="md-form col-xl-6 ">
                                             <i class="fas fa-lock prefix white-text active"></i>
+                                            <label for="Lastname">Your lastname</label>
                                             <input type="text" id="form4" name="Lastname" 
                                             class="form-control" id="inputLastname" value="<?= set_value('Lastname');?>">
-                                            <label for="Lastname">Your lastname</label>
                                         </div>
                                     </div>
                                     <div class="row">
+                                        
                                         <div class="md-form col-xl-6 ">
-                                            <select type="text" name="Sex" class="form-control form-select" id="inputSex" value="<?= set_value('Sex');?>">
+                                            <label for="inputSex" class="active">sex</label>
+                                            <select type="text" name="Sex" class="form-control form-select mt-2" id="inputSex" value="<?= set_value('Sex');?>">
                                                 <option value="ชาย">ชาย</option>
                                                 <option value="หญิง">หญิง</option>
                                             </select>
-                                            <label for="inputSex" class="active">sex</label>
+                                            
                                         </div>
                                         <div class="md-form col-xl-6 ">
-                                            <input type="text" name="Province" class=" form-control" id="inputProvince" value="<?= set_value('Province');?>">
                                             <label for="inputProvince" class="white-text form-label">province</label>
+                                            <input type="text" name="Province" class=" form-control" id="inputProvince" value="<?= set_value('Province');?>">
                                         </div>
                                     </div>
                                     <div class="mb-3">
-                                        <input type="text" name="StudentID" class=" form-control" id="inputStudentID" value="<?= set_value('StudentID');?>">
                                         <label for="inputStudentID" class="white-text form-label">student id</label>
+                                        <input type="text" name="StudentID" class=" form-control" id="inputStudentID" value="<?= set_value('StudentID');?>">
+                                        
                                     </div>
                                     <div class="mb-3">
-                                        <input type="password" name="Password" class="form-control" id="inputPassword" value="<?= set_value('Password');?>">
                                         <label for="inputPassword" class="white-text form-label">password</label>
+                                        <input type="password" name="Password" class="form-control" id="inputPassword" value="<?= set_value('Password');?>">
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col">
-                                            <input type="text" name="Section" class="form-control" id="inputSection" value="<?= set_value('Section');?>">
                                             <label for="inputSection" class="white-text form-label">study group</label>    
+                                            <input type="text" name="Section" class="form-control" id="inputSection" value="<?= set_value('Section');?>">
                                         </div>
                                         <div class="col">
-                                            <input type="text" name="EducationYear" class="form-control" id="inputEducationYear" value="<?= set_value('EducationYear');?>">
                                             <label for="inputEducationYear" class="white-text form-label">educationYear</label>
+                                            <input type="text" name="EducationYear" class="form-control" id="inputEducationYear" value="<?= set_value('EducationYear');?>">
                                         </div>
                                         
 
 
                                     </div>
                                     <div class="mb-3">
-                                        <input type="text" name="Major" class="form-control" id="inputMajor" value="<?= set_value('Major');?>">
                                         <label for="inputMajor" class="white-text form-label">major</label>
+                                        <input type="text" name="Major" class="form-control" id="inputMajor" value="<?= set_value('Major');?>">
 
                                     </div>
                                     
